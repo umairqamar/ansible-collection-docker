@@ -10,7 +10,7 @@
 
 - name: Docker | Manage OS not supported by docker-ce
   fail:
-    msg: "This OS is not supported by Docker-CE, and therefor not supported by this role."
+    msg: "This OS is not supported by Docker-CE, and therefore not supported by this role."
   when:
     - docker_edition == "ce"
     - (ansible_distribution|lower == "centos" and ansible_distribution_major_version == "6") or
